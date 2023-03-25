@@ -1,0 +1,45 @@
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class Main {
+
+    public static void main(String args[])
+    {
+
+        LinkedList<String> Animal = new LinkedList<>();
+        LinkedList<String> deleteAnimal = new LinkedList<>();
+
+
+        Animal.add("Kelinci");
+        Animal.add("Kambing");
+        Animal.add("Unta");
+        Animal.addLast("Domba");
+        Animal.addFirst("Sapi");
+
+        System.out.print("Hewan : ");
+        System.out.println(Animal);
+
+        deleteAnimal.add("Kelinci");
+        deleteAnimal.add("Kambing");
+        deleteAnimal.add("Unta");
+
+        System.out.println("\nHewan yang di hapus : ");
+        System.out.println(deleteAnimal);
+
+        Iterator<String> iterator = Animal.iterator();
+        while (iterator.hasNext()) {
+            String animal = iterator.next();
+        }
+
+        if(deleteAnimal.contains(Animal)){
+            iterator.remove();
+        }
+
+        Animal.remove("Kelinci");
+        Animal.remove("Kambing");
+        Animal.remove("Unta");
+
+        System.out.println("\nOutput Hewan");
+        System.out.println(Animal);
+    }
+}
